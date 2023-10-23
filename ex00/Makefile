@@ -6,7 +6,7 @@
 #    By: jadithya <jadithya@student.42abudhabi.ae>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/15 18:23:29 by jadithya          #+#    #+#              #
-#    Updated: 2023/10/23 11:41:47 by jadithya         ###   ########.fr        #
+#    Updated: 2023/10/23 11:59:27 by jadithya         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,6 @@ NAME := zombies
 CFLAGS := -Wall -Wextra -Werror -std=c++98
 
 SRCS := main.cpp\
-		Zombie.hpp\
 		Zombie.cpp\
 		newZombie.cpp\
 		randomChump.cpp
@@ -31,7 +30,7 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	$(CC) $(CFLAGS) $(OBJS) -o $@
 
-$(OBJS): $(SRCS)
+%.o: %.cpp
 	$(CC) $(CFLAGS) -o $@ -c $<
 
 clean:
