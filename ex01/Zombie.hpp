@@ -6,7 +6,7 @@
 /*   By: jadithya <jadithya@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 11:49:13 by jadithya          #+#    #+#             */
-/*   Updated: 2023/10/23 13:17:49 by jadithya         ###   ########.fr       */
+/*   Updated: 2023/10/23 14:15:50 by jadithya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ class Zombie {
 
 	public:
 		Zombie();
-		Zombie(std::string name);
 		~Zombie();
 
 		void	announce(void);
+		void	setName(std::string name);
 };
 
 Zombie	*zombieHorde(int N, std::string name);
